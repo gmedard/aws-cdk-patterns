@@ -1,12 +1,13 @@
 # aws_cdk_patterns/compute/ec2.py
 
 import logging
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, TYPE_CHECKING
 
 from constructs import Construct
 from aws_cdk import aws_ec2 as ec2, aws_iam as iam, Stack, Tags, CfnOutput
 
-from ..network.vpc import IVpcPattern
+if TYPE_CHECKING:
+    from ..network.vpc import IVpcPattern
 
 logger = logging.getLogger(__name__)
 

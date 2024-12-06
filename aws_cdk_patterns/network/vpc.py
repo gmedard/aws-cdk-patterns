@@ -2,8 +2,7 @@
 
 import ipaddress
 import logging
-from typing import Optional, Dict, Any
-from abc import ABC, abstractmethod
+from typing import Optional, Dict, Any, Protocol, runtime_checkable
 
 from constructs import Construct
 from aws_cdk import (
@@ -17,20 +16,18 @@ from aws_cdk import (
 logger = logging.getLogger(__name__)
 
 
-class IVpcPattern(ABC):
+@runtime_checkable
+class IVpcPattern(Protocol):
     """Interface for VPC patterns"""
 
-    @abstractmethod
     def get_vpc(self) -> ec2.IVpc:
         """Get the VPC instance"""
         pass
 
-    @abstractmethod
     def get_instance_role(self) -> iam.IRole:
         """Get the instance IAM role"""
         pass
 
-    @abstractmethod
     def get_instance_security_group(self) -> ec2.ISecurityGroup:
         """Get the instance security group"""
         pass
