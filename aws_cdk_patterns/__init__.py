@@ -1,3 +1,12 @@
-from aws_cdk_patterns.network.vpc import CustomVpcPattern
+# aws_cdk_patterns/__init__.py
 
-__all__ = ["CustomVpcPattern"]
+from .network.vpc import CustomVpcPattern, IVpcPattern
+from .compute.ec2 import EC2InstancePattern
+
+__version__ = "0.1.0"
+
+__all__ = [
+    "CustomVpcPattern",
+    "IVpcPattern",
+    "EC2InstancePattern",
+]
