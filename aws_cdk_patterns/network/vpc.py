@@ -1,5 +1,5 @@
 from constructs import Construct
-from aws_cdk_lib import aws_ec2 as ec2
+from aws_cdk import aws_ec2 as ec2
 
 
 class CustomVpcPattern(Construct):
