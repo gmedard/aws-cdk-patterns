@@ -1,3 +1,8 @@
-from aws_cdk_patterns.network.vpc import CustomVpcPattern
+# aws_cdk_patterns/network/__init__.py
 
-__all__ = ["CustomVpcPattern"]
+from aws_cdk_patterns.network.vpc import CustomVpcPattern, IVpcPattern
+
+__all__ = [
+    "CustomVpcPattern",
+    "IVpcPattern",
+]

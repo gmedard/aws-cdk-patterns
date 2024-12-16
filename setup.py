@@ -1,12 +1,34 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name="aws-cdk-patterns",
     version="0.1.0",
-    description="Reusable AWS CDK Patterns",
     author="Greg Medard",
     author_email="medarg@amazon.com",
-    packages=find_packages(include=["aws_cdk_patterns", "aws_cdk_patterns.*"]),
-    install_requires=["aws-cdk-lib>=2.0.0", "constructs>=10.0.0,<11.0.0"],
+    description="AWS CDK patterns for common infrastructure components",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/gmedard/aws-cdk-patterns",
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Operating System :: OS Independent",
+    ],
     python_requires=">=3.12",
+    install_requires=[
+        "aws-cdk-lib>=2.0.0",
+        "constructs>=10.0.0,<11.0.0",
+    ],
 )
