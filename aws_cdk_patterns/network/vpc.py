@@ -9,7 +9,7 @@ class CustomVpcPattern(Construct):
         # Configuration with defaults
         self.config = {
             "cidr": kwargs.get("cidr", "10.0.0.0/16"),
-            "max_azs": kwargs.get("max_azs", 2),
+            "max_azs": kwargs.get("max_azs", 3),
             "enable_internet": kwargs.get("enable_internet", True),
             "nat_gateways": (
                 kwargs.get("nat_gateways", 1)
